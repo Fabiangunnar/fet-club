@@ -1,20 +1,18 @@
-import Image from "next/image";
-import {Inter} from "next/font/google";
 import MainLayout from "@/layout/MainLayout";
+import {zoomIn} from "@/utils/motions";
+import {motion} from "framer-motion";
 import Link from "next/link";
+import React from "react";
+import {Autoplay, EffectFade, EffectCoverflow} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 
-import {motion} from "framer-motion";
+type Props = {};
 
-import {Autoplay, EffectCoverflow, EffectFade} from "swiper/modules";
-import {zoomIn} from "@/utils/motions";
-const inter = Inter({subsets: ["latin"]});
-
-export default function Home() {
+const dungeon = (props: Props) => {
   return (
     <MainLayout>
       <main className="text-3xl">
-        <div className="h-screen borderborder-black relative">
+        <div className="h-[70vh]  relative">
           <div className="absolute  top-0 left-0 h-full w-full -z-10 pointer-events-none">
             <Swiper
               modules={[Autoplay, EffectFade, EffectCoverflow]}
@@ -31,7 +29,7 @@ export default function Home() {
                   whileInView="show"
                   initial="hidden"
                   viewport={{once: false, amount: 0}}
-                  className="h-screen"
+                  className="h-[70vh]"
                 >
                   <img
                     className="h-full w-full object-cover"
@@ -46,7 +44,7 @@ export default function Home() {
                   whileInView="show"
                   initial="hidden"
                   viewport={{once: false, amount: 0}}
-                  className="h-screen"
+                  className="h-[70vh]"
                 >
                   <img
                     className="h-full w-full object-cover"
@@ -61,7 +59,7 @@ export default function Home() {
                   whileInView="show"
                   initial="hidden"
                   viewport={{once: false, amount: 0}}
-                  className="h-screen"
+                  className="h-[70vh]"
                 >
                   <img
                     className="h-full w-full object-cover"
@@ -73,26 +71,17 @@ export default function Home() {
             </Swiper>
           </div>
           <div className="absolute  top-0 left-0 w-full h-full p-4 bg-transparent flex flex-col gap-8 justify-center items-center">
-            <div className="text-[2.6rem] text-white">
-              Connect. Create. Explore
-            </div>
-            <div className="text-2xl uppercase text-white">
-              DISCREET AND INTIMATE
-            </div>
-            <div>
-              <button className="text-white text-2xl bg-red-700 p-4 px-8 rounded-lg transition-all hover:bg-red-600">
-                Become a Member
-              </button>
-            </div>
+            <div className="text-[2.8rem] text-white">Dungeon</div>
           </div>
         </div>
-        Red
         <div className="pt-12">
-          <Link href="/about" className=" text-3xl">
-            About
+          <Link href="/" className=" text-3xl">
+            Home
           </Link>{" "}
         </div>
       </main>
     </MainLayout>
   );
-}
+};
+
+export default dungeon;

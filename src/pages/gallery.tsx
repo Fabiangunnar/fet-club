@@ -2,18 +2,23 @@ import MainLayout from "@/layout/MainLayout";
 import {zoomIn} from "@/utils/motions";
 import {motion} from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, {useRef} from "react";
 import {Autoplay, EffectFade, EffectCoverflow} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 type Props = {};
 
 const Gallery = (props: Props) => {
+  const targetRef = useRef(null);
+
   return (
-    <MainLayout>
+    <MainLayout targetRef={targetRef}>
       <main className="text-3xl">
         <div className="h-[70vh]  relative">
-          <div className="absolute  top-0 left-0 h-full w-full -z-10 pointer-events-none">
+          <div
+            ref={targetRef}
+            className="absolute  top-0 left-0 h-full w-full -z-10 pointer-events-none"
+          >
             <Swiper
               modules={[Autoplay, EffectFade, EffectCoverflow]}
               autoplay={{delay: 10000}} // Add this to enable autoplay and set the delay between slides

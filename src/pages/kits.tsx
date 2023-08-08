@@ -2,17 +2,19 @@ import MainLayout from "@/layout/MainLayout";
 import {zoomIn} from "@/utils/motions";
 import {motion} from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, {useRef} from "react";
 import {Autoplay, EffectFade, EffectCoverflow} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 type Props = {};
 
 const kits = (props: Props) => {
+  const targetRef = useRef(null);
+
   return (
-    <MainLayout>
+    <MainLayout targetRef={targetRef}>
       <main className="text-3xl">
-        <div className="h-[70vh]  relative">
+        <div ref={targetRef} className="h-[70vh] border relative">
           <div className="absolute  top-0 left-0 h-full w-full -z-10 pointer-events-none">
             <Swiper
               modules={[Autoplay, EffectFade, EffectCoverflow]}
@@ -74,7 +76,27 @@ const kits = (props: Props) => {
             <div className="text-[2.8rem] text-white">Kits</div>
           </div>
         </div>
-        Green
+        <div className="font-poppins p-4 flex flex-col gap-4 pt-12 justify-center items-center">
+          <h3 className="font-montserrat">STARTER KITS</h3>
+          <div className="p-4 max-w-[60rem] justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-red-200">
+            <h4>DESCRIPTION</h4>
+            <ol className="flex flex-col gap-2 text-[15px]">
+              <li>1. Silicone Slave Collar-$200</li>
+              <li>2. Position Stool-$300</li>
+              <li>3. E Pay Cock rings set-$200</li>
+              <li>4. Soft touch hog tie with 4 cuffs-$350</li>
+              <li>5. Exo-$400</li>
+              <li>6. Orgasm control chastity belt-$300</li>
+              <li>
+                7. Elektra nipple teasers & nipple play vacuum twist
+                suckers-$750
+              </li>
+              <li>8. Chastity cages-$205</li>
+              <li>9. Ball gang-$115</li>
+              <li>10. Anal plug -$315</li>
+            </ol>
+          </div>
+        </div>
         <div className="pt-12">
           <Link href="/" className=" text-3xl">
             Home

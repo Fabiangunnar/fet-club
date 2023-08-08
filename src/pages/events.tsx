@@ -2,17 +2,19 @@ import MainLayout from "@/layout/MainLayout";
 import {zoomIn} from "@/utils/motions";
 import {motion} from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, {useRef} from "react";
 import {Autoplay, EffectFade, EffectCoverflow} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 type Props = {};
 
 const Events = (props: Props) => {
+  const targetRef = useRef(null);
+
   return (
-    <MainLayout>
+    <MainLayout targetRef={targetRef}>
       <main className="text-3xl">
-        <div className="h-[70vh]  relative">
+        <div ref={targetRef} className="h-[70vh]  relative">
           <div className="absolute  top-0 left-0 h-full w-full -z-10 pointer-events-none">
             <Swiper
               modules={[Autoplay, EffectFade, EffectCoverflow]}
@@ -74,6 +76,17 @@ const Events = (props: Props) => {
             <div className="text-[2.8rem] text-white">Events</div>
           </div>
         </div>
+        <div className="font-poppins p-4 flex flex-col gap-4 pt-12 justify-center items-center">
+          <h3 className="font-montserrat text-center">
+            FETHOME DISCREET BDSM EVENTS
+          </h3>
+          <div className="p-4 max-w-[60rem]  justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-red-200">
+            <p className="text-[16px] text-center w-full">
+              No Upcoming Events at the moment.
+            </p>
+          </div>
+        </div>
+
         <div className="pt-12">
           <Link href="/" className=" text-3xl">
             Home

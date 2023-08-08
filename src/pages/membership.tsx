@@ -2,17 +2,19 @@ import MainLayout from "@/layout/MainLayout";
 import {zoomIn} from "@/utils/motions";
 import {motion} from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, {useRef} from "react";
 import {Autoplay, EffectFade, EffectCoverflow} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 type Props = {};
 
 const Membership = (props: Props) => {
+  const targetRef = useRef(null);
+
   return (
-    <MainLayout>
+    <MainLayout targetRef={targetRef}>
       <main className="text-3xl">
-        <div className="h-[70vh]  relative">
+        <div ref={targetRef} className="h-[70vh]  relative">
           <div className="absolute  top-0 left-0 h-full w-full -z-10 pointer-events-none">
             <Swiper
               modules={[Autoplay, EffectFade, EffectCoverflow]}

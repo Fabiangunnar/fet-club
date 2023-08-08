@@ -9,7 +9,7 @@ export const navData: NavType[] = [
     id: 2,
     state: false,
     head: "About Us",
-    link: "/about",
+    link: "#about",
   },
   {
     id: 3,

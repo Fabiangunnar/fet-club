@@ -1,16 +1,18 @@
 import {NavType, navData} from "@/data/data";
 import Link from "next/link";
 import {useRouter} from "next/router";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {IoMdClose} from "react-icons/io";
 
 type Props = {};
 
-const MainLayout = ({children}: any) => {
+const MainLayout = ({targetRef, children}: any) => {
   const [navdata, setNavdata] = useState<any>(navData);
   const [isOpenNav, setIsOpenNav] = useState(false);
   const router = useRouter();
+  const [isElementAtTop, setIsElementAtTop] = useState(false);
+
   const handleNav = (item: any) => {
     setNavdata((prev: any) => {
       //   console.log(prev);
@@ -26,10 +28,40 @@ const MainLayout = ({children}: any) => {
     });
     // router.
   };
+  // Function to update the state based on the element's position
+  const handleScroll = () => {
+    if (!targetRef.current) return;
+
+    const elementTop = targetRef.current.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // You can adjust this threshold as needed
+    const threshold = 40; // In pixels
+
+    if (
+      elementTop < windowHeight &&
+      elementTop - threshold >= -targetRef.current.clientHeight
+    ) {
+      setIsElementAtTop(false);
+    } else {
+      setIsElementAtTop(true);
+    }
+  };
+  // Attach scroll event listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <header className="z-20 backdrop-blur-[4px] fixed top-0 left-0 w-full flex  justify-center items-center">
+      <header
+        className={`${
+          isElementAtTop ? "nav-bar_black" : ""
+        }  transition-all z-20 backdrop-blur-[4px] nav-bar fixed top-0 left-0 w-full flex  justify-center items-center`}
+      >
         <nav className="flex p-3 h-16 justify-between relative items-center w-full gap-3 max-w-[70rem]">
           <div className="h-10">
             <img
@@ -66,7 +98,14 @@ const MainLayout = ({children}: any) => {
             } transition-all w-full`}
           >
             {navdata.map((data: NavType) => (
-              <Link key={data.id} href={data.link}>
+              <Link
+                key={data.id}
+                href={
+                  router.pathname !== "/" && data.link.includes("about")
+                    ? "/" + data.link
+                    : data.link
+                }
+              >
                 <div
                   className={`p-2 px-4 cursor-pointer ${
                     data.state ? "text-red-900" : ""

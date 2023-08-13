@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {Inter} from "next/font/google";
 import MainLayout from "@/layout/MainLayout";
 import Link from "next/link";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -9,7 +8,6 @@ import {motion} from "framer-motion";
 import {Autoplay, EffectCoverflow, EffectFade} from "swiper/modules";
 import {zoomIn} from "@/utils/motions";
 import {useRef} from "react";
-const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
   const targetRef = useRef(null);

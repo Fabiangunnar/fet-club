@@ -83,7 +83,7 @@ const Gallery = (props: Props) => {
             <div className="text-[2.8rem] text-white">Gallery</div>
           </div>
         </div>
-        <div className="grid grid-cols-mine gap-2 md:px-8 sm:px-4 py-4 px-2 lg:px-24 justify-center items-center">
+        <div className="grid bg-white grid-cols-mine gap-2 md:px-8 sm:px-4 py-4 px-2 lg:px-24 justify-center items-center">
           {gallery_images.map((image, index) => (
             <div
               className="w-full h-full cursor-pointer overflow-hidden  transition-all rounded-md"

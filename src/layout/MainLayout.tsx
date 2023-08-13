@@ -1,33 +1,25 @@
+import {setNavData} from "@/app-slice/AppSlice";
+import {AppDispatch, RootState} from "@/app/store";
+import Footer from "@/components/Footer";
+import Modal from "@/components/Modal";
 import {NavType, navData} from "@/data/data";
 import Link from "next/link";
 import {useRouter} from "next/router";
 import React, {useEffect, useState} from "react";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {IoMdClose} from "react-icons/io";
+import {useDispatch, useSelector} from "react-redux";
 
 type Props = {};
 
 const MainLayout = ({targetRef, children}: any) => {
-  const [navdata, setNavdata] = useState<any>(navData);
+  const {navdata} = useSelector((state: RootState) => state.app);
+  const dispatch: AppDispatch = useDispatch();
+
   const [isOpenNav, setIsOpenNav] = useState(false);
   const router = useRouter();
   const [isElementAtTop, setIsElementAtTop] = useState(false);
 
-  const handleNav = (item: any) => {
-    setNavdata((prev: any) => {
-      //   console.log(prev);
-      return prev.map((data: {id: any}) => {
-        console.log(data.id, item.id);
-        if (data.id === item.id) {
-          router.push(item.link);
-          return {...data, state: true};
-        } else {
-          return {...data, state: false};
-        }
-      });
-    });
-    // router.
-  };
   // Function to update the state based on the element's position
   const handleScroll = () => {
     if (!targetRef.current) return;
@@ -70,10 +62,11 @@ const MainLayout = ({targetRef, children}: any) => {
               alt=""
             />
           </div>
-          <div className="hidden md:flex gap-2 font-poppins justify-center items-center text-white">
+          <div className="hidden md:flex gap-2 lg:gap-8 font-poppins justify-center items-center text-white">
             {navdata.map((data: NavType) => (
               <div
                 key={data.id}
+                onClick={() => dispatch(setNavData(data))}
                 className={`${
                   data.state ? "text-red-500" : ""
                 } hover:text-red-400 transition-all`}
@@ -93,12 +86,13 @@ const MainLayout = ({targetRef, children}: any) => {
             )}
           </div>
           <div
-            className={`bg-[#ffffff] md:hidden  font-poppins py-4 backdrop-blur-[10px] fixed top-16 ${
+            className={`bg-[#ffffff] text-black md:hidden  font-poppins py-4 backdrop-blur-[10px] fixed top-16 ${
               isOpenNav ? "left-0" : "-left-[100%]"
             } transition-all w-full`}
           >
             {navdata.map((data: NavType) => (
               <Link
+                onClick={() => dispatch(setNavData(data))}
                 key={data.id}
                 href={
                   router.pathname !== "/" && data.link.includes("about")
@@ -107,7 +101,7 @@ const MainLayout = ({targetRef, children}: any) => {
                 }
               >
                 <div
-                  className={`p-2 px-4 cursor-pointer ${
+                  className={`p-2 text-black px-4 cursor-pointer ${
                     data.state ? "text-red-900" : ""
                   }`}
                 >
@@ -119,6 +113,8 @@ const MainLayout = ({targetRef, children}: any) => {
         </nav>
       </header>
       {children}
+      <Footer />
+      <Modal />
     </>
   );
 };

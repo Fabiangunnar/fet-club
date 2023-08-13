@@ -25,7 +25,7 @@ const dungeon = (props: Props) => {
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
                   whileInView="show"
@@ -39,7 +39,7 @@ const dungeon = (props: Props) => {
                     alt=""
                   />
                 </motion.div>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
@@ -76,8 +76,8 @@ const dungeon = (props: Props) => {
             <div className="text-[2.8rem] text-white">Rules</div>
           </div>
         </div>
-        <div className="font-poppins p-4 flex flex-col gap-4 pt-12 justify-center items-center">
-          <h3 className="font-montserrat">DUNGEON RULES</h3>
+        <div className="font-poppins p-4 text-black bg-white flex flex-col gap-4 pt-12 justify-center items-center">
+          <h3 className="font-montserrat text-center">DUNGEON RULES</h3>
           <p className="text-[16px] text-center max-w-[50rem]">
             Fethome Discreet Club was created for the community as a safe space
             for all. Please read through this set of house rules to make sure we
@@ -85,7 +85,7 @@ const dungeon = (props: Props) => {
             cute and keep it sexy!
           </p>
           <div className="p-4 max-w-[60rem] justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-red-200">
-            <p className="text-[16px] ">
+            <p className="text-[15px] ">
               A myriad of activities and a variety of people will be taking
               place and entering the space. Please come in with an open mind and
               respectful demeanor with the safety of all in mind.
@@ -125,11 +125,6 @@ const dungeon = (props: Props) => {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="pt-12">
-          <Link href="/" className=" text-3xl">
-            Home
-          </Link>{" "}
         </div>
       </main>
     </MainLayout>

@@ -25,7 +25,7 @@ const Events = (props: Props) => {
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
                   whileInView="show"
@@ -39,7 +39,7 @@ const Events = (props: Props) => {
                     alt=""
                   />
                 </motion.div>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
@@ -76,7 +76,7 @@ const Events = (props: Props) => {
             <div className="text-[2.8rem] text-white">Events</div>
           </div>
         </div>
-        <div className="font-poppins p-4 flex flex-col gap-4 pt-12 justify-center items-center">
+        <div className="font-poppins p-4 text-black bg-white flex flex-col gap-4 pt-12 justify-center items-center">
           <h3 className="font-montserrat text-center">
             FETHOME DISCREET BDSM EVENTS
           </h3>
@@ -85,12 +85,6 @@ const Events = (props: Props) => {
               No Upcoming Events at the moment.
             </p>
           </div>
-        </div>
-
-        <div className="pt-12">
-          <Link href="/" className=" text-3xl">
-            Home
-          </Link>{" "}
         </div>
       </main>
     </MainLayout>

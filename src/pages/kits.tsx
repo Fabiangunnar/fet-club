@@ -25,7 +25,7 @@ const kits = (props: Props) => {
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
                   whileInView="show"
@@ -39,7 +39,7 @@ const kits = (props: Props) => {
                     alt=""
                   />
                 </motion.div>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
@@ -76,7 +76,7 @@ const kits = (props: Props) => {
             <div className="text-[2.8rem] text-white">Kits</div>
           </div>
         </div>
-        <div className="font-poppins p-4 flex flex-col gap-4 pt-12 justify-center items-center">
+        <div className="font-poppins p-4 text-black bg-white flex flex-col gap-4 pt-12 justify-center items-center">
           <h3 className="font-montserrat">STARTER KITS</h3>
           <div className="p-4 max-w-[60rem] justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-red-200">
             <h4>DESCRIPTION</h4>
@@ -96,11 +96,6 @@ const kits = (props: Props) => {
               <li>10. Anal plug -$315</li>
             </ol>
           </div>
-        </div>
-        <div className="pt-12">
-          <Link href="/" className=" text-3xl">
-            Home
-          </Link>{" "}
         </div>
       </main>
     </MainLayout>

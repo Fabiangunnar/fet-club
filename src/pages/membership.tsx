@@ -25,7 +25,7 @@ const Membership = (props: Props) => {
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
                   whileInView="show"
@@ -39,7 +39,7 @@ const Membership = (props: Props) => {
                     alt=""
                   />
                 </motion.div>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <motion.div
                   variants={zoomIn(0, 5)}
@@ -76,10 +76,27 @@ const Membership = (props: Props) => {
             <div className="text-[2.8rem] text-white">Membership</div>
           </div>
         </div>
-        <div className="pt-12">
-          <Link href="/" className=" text-3xl">
-            Home
-          </Link>{" "}
+        <div className="font-poppins p-4 bg-white text-black flex flex-col gap-6 pt-12 justify-center items-center">
+          <h3 className="font-montserrat text-center text-2xl md:text-3xl">
+            FETHOME DISCREET CLUB MEMBERSHIP FORM
+          </h3>
+          <p className="text-lg text-center max-w-[40rem]">
+            Kindly download and fill the membership form. After filling the
+            form, please submit via email to{" "}
+            <Link
+              className="text-red-400"
+              href={`mailto:support@fethomediscreetclub.com`}
+            >
+              support@fethomediscreetclub.com
+            </Link>{" "}
+            or contact us via the live chat. For membership payments, also
+            contact us via email or live chat.
+          </p>
+          <div>
+            <button className="text-white font-montserrat text-[18px] bg-red-700 p-2 px-4 sm:p-4 sm:px-8 sm:text-2xl rounded-lg transition-all hover:bg-red-600">
+              Download Membership Form
+            </button>
+          </div>
         </div>
       </main>
     </MainLayout>

@@ -78,7 +78,7 @@ const Rentals = (props: Props) => {
         </div>
         <div className="font-poppins p-4  bg-white text-black flex flex-col gap-6 pt-12 justify-center items-center w-full text-start">
           <h3 className="font-montserrat text-start w-full max-w-[50rem] text-2xl md:text-3xl">
-            FETHOME DISCREET CLUB MEMBERSHIP FORM
+            BEEHIVE DISCREET CLUB MEMBERSHIP FORM
           </h3>
           <div className="flex flex-col  w-full gap-4 max-w-[50rem]">
             <h4 className="font-bold text-2xl ">HOURLY RATES :</h4>

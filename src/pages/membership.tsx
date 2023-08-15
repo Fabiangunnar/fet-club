@@ -78,7 +78,7 @@ const Membership = (props: Props) => {
         </div>
         <div className="font-poppins p-4 bg-white text-black flex flex-col gap-6 pt-12 justify-center items-center">
           <h3 className="font-montserrat text-center text-2xl md:text-3xl">
-            FETHOME DISCREET CLUB MEMBERSHIP FORM
+            BEEHIVE DISCREET CLUB MEMBERSHIP FORM
           </h3>
           <p className="text-lg text-center max-w-[40rem]">
             Kindly download and fill the membership form. After filling the
@@ -90,7 +90,7 @@ const Membership = (props: Props) => {
               support@fethomediscreetclub.com
             </Link>{" "}
             or contact us via the live chat. For membership payments, also
-            contact us via email or live chat.
+            contact us via email or whatsapp.
           </p>
           <div>
             <Link

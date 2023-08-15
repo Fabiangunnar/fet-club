@@ -79,7 +79,7 @@ const dungeon = (props: Props) => {
         <div className="font-poppins p-4 text-black bg-white flex flex-col gap-4 pt-12 justify-center items-center">
           <h3 className="font-montserrat text-center">DUNGEON RULES</h3>
           <p className="text-[16px] text-center max-w-[50rem]">
-            Fethome Discreet Club was created for the community as a safe space
+            Beehive Discreet Club was created for the community as a safe space
             for all. Please read through this set of house rules to make sure we
             all can benefit from the security and safety of sanctuary. Keep it
             cute and keep it sexy!

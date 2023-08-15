@@ -92,7 +92,7 @@ const Rentals = (props: Props) => {
               <li>Overnight /$600</li>
             </ul>
             <div>
-              <button className="text-white font-montserrat text-[18px] bg-red-700 p-2 px-4   rounded-lg transition-all hover:bg-red-600">
+              <button className="text-white font-montserrat text-[18px] bg-[#105d86] p-2 px-4   rounded-lg transition-all hover:bg-[#0175b2]">
                 Book Now
               </button>
             </div>
@@ -134,7 +134,7 @@ const Rentals = (props: Props) => {
               Contact for more information about booking your reservation.
             </p>
             <div>
-              <button className="text-white font-montserrat text-[18px] bg-red-700 p-2 px-4  rounded-lg transition-all hover:bg-red-600">
+              <button className="text-white font-montserrat text-[18px] bg-[#105d86] p-2 px-4  rounded-lg transition-all hover:bg-[#0175b2]">
                 Book Now
               </button>
             </div>

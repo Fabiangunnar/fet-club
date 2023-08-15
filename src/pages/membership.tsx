@@ -84,7 +84,7 @@ const Membership = (props: Props) => {
             Kindly download and fill the membership form. After filling the
             form, please submit via email to{" "}
             <Link
-              className="text-red-400"
+              className="text-[#0175b2]"
               href={`mailto:support@fethomediscreetclub.com`}
             >
               support@fethomediscreetclub.com
@@ -93,9 +93,13 @@ const Membership = (props: Props) => {
             contact us via email or live chat.
           </p>
           <div>
-            <button className="text-white font-montserrat text-[18px] bg-red-700 p-2 px-4 sm:p-4 sm:px-8 sm:text-2xl rounded-lg transition-all hover:bg-red-600">
+            <Link
+              href={"/BHDCFORM.pdf"}
+              target="_blank"
+              className="text-white font-montserrat text-[18px] bg-[#105d86] p-3 px-4 sm:p-4 sm:px-8 sm:text-2xl rounded-lg transition-all hover:bg-[#0175b2]"
+            >
               Download Membership Form
-            </button>
+            </Link>
           </div>
         </div>
       </main>

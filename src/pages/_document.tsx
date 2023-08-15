@@ -5,7 +5,8 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="color-scheme" content="light" />
-        {/* <title>FetHome</title> */}
+        <title>FetHome</title>
+        <link rel="icon" type="image/svg+xml" href="/logo.png" />
       </Head>
 
       <body>

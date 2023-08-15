@@ -81,7 +81,7 @@ export default function Home() {
               DISCREET AND INTIMATE
             </div>
             <div>
-              <button className="text-white font-montserrat text-2xl bg-red-700 p-4 px-8 rounded-lg transition-all hover:bg-red-600">
+              <button className="text-white font-montserrat text-2xl bg-[#105d86] p-4 px-8 rounded-lg transition-all hover:bg-[#0175b2]">
                 Become a Member
               </button>
             </div>

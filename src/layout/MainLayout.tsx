@@ -55,9 +55,9 @@ const MainLayout = ({targetRef, children}: any) => {
         }  transition-all z-20 backdrop-blur-[4px] nav-bar fixed top-0 left-0 w-full flex  justify-center items-center`}
       >
         <nav className="flex p-3 h-16 justify-between relative items-center w-full gap-3 max-w-[70rem]">
-          <div className="h-10">
+          <div className="h-12 w-28">
             <img
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
               src="/logo.png"
               alt=""
             />
@@ -68,8 +68,8 @@ const MainLayout = ({targetRef, children}: any) => {
                 key={data.id}
                 onClick={() => dispatch(setNavData(data))}
                 className={`${
-                  data.state ? "text-red-500" : ""
-                } hover:text-red-400 transition-all`}
+                  data.state ? "text-[#0175b2]" : ""
+                } hover:text-[#58b9ed] transition-all`}
               >
                 <Link href={data.link}>{data.head}</Link>
               </div>
@@ -102,8 +102,8 @@ const MainLayout = ({targetRef, children}: any) => {
               >
                 <div
                   className={`p-2 text-black px-4 cursor-pointer ${
-                    data.state ? "text-red-900" : ""
-                  }`}
+                    data.state ? "text-[#0175b2]" : ""
+                  } hover:text-[#58b9ed] transition-all`}
                 >
                   {data.head}
                 </div>

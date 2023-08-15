@@ -84,7 +84,7 @@ const dungeon = (props: Props) => {
             all can benefit from the security and safety of sanctuary. Keep it
             cute and keep it sexy!
           </p>
-          <div className="p-4 max-w-[60rem] justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-red-200">
+          <div className="p-4 max-w-[60rem] justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-[#b3e4ff]">
             <p className="text-[15px] ">
               A myriad of activities and a variety of people will be taking
               place and entering the space. Please come in with an open mind and

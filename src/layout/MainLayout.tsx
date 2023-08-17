@@ -1,13 +1,14 @@
-import {setNavData} from "@/app-slice/AppSlice";
+import {OpenModal2, setNavData} from "@/app-slice/AppSlice";
 import {AppDispatch, RootState} from "@/app/store";
 import Footer from "@/components/Footer";
 import Modal from "@/components/Modal";
+import Modal2 from "@/components/Modal2";
 import {NavType, navData} from "@/data/data";
 import Link from "next/link";
 import {useRouter} from "next/router";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {GiHamburgerMenu} from "react-icons/gi";
-import {IoMdClose} from "react-icons/io";
+import {IoMdClose, IoMdMail} from "react-icons/io";
 import {useDispatch, useSelector} from "react-redux";
 
 type Props = {};
@@ -15,7 +16,6 @@ type Props = {};
 const MainLayout = ({targetRef, children}: any) => {
   const {navdata} = useSelector((state: RootState) => state.app);
   const dispatch: AppDispatch = useDispatch();
-
   const [isOpenNav, setIsOpenNav] = useState(false);
   const router = useRouter();
   const [isElementAtTop, setIsElementAtTop] = useState(false);
@@ -52,7 +52,7 @@ const MainLayout = ({targetRef, children}: any) => {
       <header
         className={`${
           isElementAtTop ? "nav-bar_black" : ""
-        }  transition-all z-20 backdrop-blur-[4px] nav-bar fixed top-0 left-0 w-full flex  justify-center items-center`}
+        }  max-h-20 transition-all z-20 backdrop-blur-[4px] nav-bar fixed top-0 left-0 w-full flex  justify-center items-center`}
       >
         <nav className="flex p-3 h-16 justify-between relative items-center w-full gap-3 max-w-[70rem]">
           <div className="h-12 w-28">
@@ -101,8 +101,8 @@ const MainLayout = ({targetRef, children}: any) => {
                 }
               >
                 <div
-                  className={`p-2 text-black px-4 cursor-pointer ${
-                    data.state ? "text-[#0175b2]" : ""
+                  className={`p-2  px-4 cursor-pointer ${
+                    data.state ? "text-[#0175b2] " : "text-black"
                   } hover:text-[#58b9ed] transition-all`}
                 >
                   {data.head}
@@ -113,8 +113,15 @@ const MainLayout = ({targetRef, children}: any) => {
         </nav>
       </header>
       {children}
+      <div
+        onClick={() => dispatch(OpenModal2())}
+        className="p-4 rounded-full fixed  bottom-10 right-4 cursor-pointer bg-gradient-to-b from-[#105d86] to-[#0175b2]"
+      >
+        <IoMdMail color={"#fff"} fontSize={28} />
+      </div>
       <Footer />
       <Modal />
+      <Modal2 />
     </>
   );
 };

@@ -98,7 +98,7 @@ const kits = (props: Props) => {
                   suckers-$750
                 </li>
                 <li>8. Chastity cages-$205</li>
-                <li>9. Ball gang-$115</li>
+                <li>9. Ball gag-$115</li>
                 <li>10. Anal plug -$315</li>
               </ol>
             </div>

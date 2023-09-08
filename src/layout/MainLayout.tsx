@@ -10,6 +10,7 @@ import React, {useEffect, useRef, useState} from "react";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {IoMdClose, IoMdMail} from "react-icons/io";
 import {useDispatch, useSelector} from "react-redux";
+import {usePathname} from "next/navigation";
 
 type Props = {};
 
@@ -19,7 +20,8 @@ const MainLayout = ({targetRef, children}: any) => {
   const [isOpenNav, setIsOpenNav] = useState(false);
   const router = useRouter();
   const [isElementAtTop, setIsElementAtTop] = useState(false);
-
+  const pathname = usePathname();
+  console.log(pathname);
   // Function to update the state based on the element's position
   const handleScroll = () => {
     if (!targetRef.current) return;
@@ -68,8 +70,8 @@ const MainLayout = ({targetRef, children}: any) => {
                 key={data.id}
                 onClick={() => dispatch(setNavData(data))}
                 className={`${
-                  data.state ? "text-[#0175b2]" : ""
-                } hover:text-[#58b9ed] transition-all`}
+                  data.link === pathname ? "text-red-700" : ""
+                } hover:text-red-400 transition-all`}
               >
                 <Link href={data.link}>{data.head}</Link>
               </div>
@@ -102,8 +104,8 @@ const MainLayout = ({targetRef, children}: any) => {
               >
                 <div
                   className={`p-2  px-4 cursor-pointer ${
-                    data.state ? "text-[#0175b2] " : "text-black"
-                  } hover:text-[#58b9ed] transition-all`}
+                    data.link === pathname ? "text-red-700 " : "text-black"
+                  } hover:text-red-400 transition-all`}
                 >
                   {data.head}
                 </div>
@@ -115,7 +117,7 @@ const MainLayout = ({targetRef, children}: any) => {
       {children}
       <div
         onClick={() => dispatch(OpenModal2())}
-        className="p-4 rounded-full fixed  bottom-10 right-4 cursor-pointer bg-gradient-to-b from-[#105d86] to-[#0175b2]"
+        className="p-4 rounded-full fixed  bottom-10 right-4 cursor-pointer bg-gradient-to-b from-red-700 to-red-500"
       >
         <IoMdMail color={"#fff"} fontSize={28} />
       </div>

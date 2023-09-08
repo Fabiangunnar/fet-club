@@ -88,7 +88,7 @@ export default function Home() {
               </div>
               <div>
                 <Link
-                  className="text-white font-montserrat text-2xl bg-[#105d86] p-4 px-8 rounded-lg transition-all hover:bg-[#0175b2]"
+                  className="text-white font-montserrat text-2xl bg-red-700 p-4 px-8 rounded-lg transition-all hover:bg-[#0175b2]"
                   href={"/membership"}
                 >
                   Become a Member

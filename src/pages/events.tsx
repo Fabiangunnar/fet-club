@@ -86,7 +86,7 @@ const Events = (props: Props) => {
             <h3 className="font-montserrat text-center">
               BEEHIVE DISCREET BDSM EVENTS
             </h3>
-            <div className="p-4 max-w-[60rem]  justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-[#b3e4ff]">
+            <div className="p-4 max-w-[60rem]  justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-red-200">
               <p className="text-[16px] text-center w-full">
                 No Upcoming Events at the moment.
               </p>

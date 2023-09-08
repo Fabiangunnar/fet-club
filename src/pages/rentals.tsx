@@ -100,7 +100,7 @@ const Rentals = (props: Props) => {
               <div>
                 <Link
                   href={"/bookings"}
-                  className="text-white font-montserrat text-[18px] bg-[#105d86] p-3 px-4   rounded-lg transition-all hover:bg-[#0175b2]"
+                  className="text-white font-montserrat text-[18px] bg-red-600 p-3 px-4   rounded-lg transition-all hover:bg-red-500"
                 >
                   Book Now
                 </Link>
@@ -145,7 +145,7 @@ const Rentals = (props: Props) => {
               <div>
                 <Link
                   href={"/bookings"}
-                  className="text-white font-montserrat text-[18px] bg-[#105d86] p-3 px-4  rounded-lg transition-all hover:bg-[#0175b2]"
+                  className="text-white font-montserrat text-[18px] bg-red-600 p-3 px-4  rounded-lg transition-all hover:bg-red-500"
                 >
                   Book Now
                 </Link>

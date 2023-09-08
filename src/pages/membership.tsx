@@ -90,7 +90,7 @@ const Membership = (props: Props) => {
               Kindly download and fill the membership form. After filling the
               form, please submit via email to{" "}
               <Link
-                className="text-[#0175b2]"
+                className="text-red-600"
                 href={`mailto:Beehivediscreetclub@gmail.com`}
               >
                 beehivediscreetclub@gmail.com
@@ -102,7 +102,7 @@ const Membership = (props: Props) => {
               <Link
                 href={"/BHDCFORM.pdf"}
                 target="_blank"
-                className="text-white font-montserrat whitespace-nowrap text-[18px] bg-[#105d86] p-3 px-4 sm:p-4 sm:px-8 sm:text-2xl rounded-lg transition-all hover:bg-[#0175b2]"
+                className="text-white font-montserrat whitespace-nowrap text-[18px] bg-red-700 p-3 px-4 sm:p-4 sm:px-8 sm:text-2xl rounded-lg transition-all hover:bg-red-500"
               >
                 Download Membership Form
               </Link>

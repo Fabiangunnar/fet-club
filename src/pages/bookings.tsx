@@ -132,7 +132,7 @@ const Bookings = (props: Props) => {
                 <div className="flex flex-col">
                   <input
                     required
-                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                     type="text"
                     name="firstname"
                     value={formData.firstname}
@@ -143,7 +143,7 @@ const Bookings = (props: Props) => {
                 <div className="flex flex-col ">
                   <input
                     required
-                    className="p-4 py-3 rounded-md border outline-none focus-within:border-[#0175b2] transition-all border-gray-400 text-sm"
+                    className="p-4 py-3 rounded-md border outline-none focus-within:border-red-400 transition-all border-gray-400 text-sm"
                     type="text"
                     name="lastname"
                     value={formData.lastname}
@@ -159,7 +159,7 @@ const Bookings = (props: Props) => {
                 <div className="flex flex-col">
                   <input
                     required
-                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                     type="text"
                     name="city"
                     value={formData.city}
@@ -170,7 +170,7 @@ const Bookings = (props: Props) => {
                 <div className="flex flex-col ">
                   <input
                     required
-                    className="p-4 py-3 rounded-md border outline-none focus-within:border-[#0175b2] transition-all border-gray-400 text-sm"
+                    className="p-4 py-3 rounded-md border outline-none focus-within:border-red-400 transition-all border-gray-400 text-sm"
                     type="text"
                     name="state_province_region"
                     value={formData.state_province_region}
@@ -181,7 +181,7 @@ const Bookings = (props: Props) => {
                 <div className="flex flex-col">
                   <input
                     required
-                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                     type="text"
                     name="zip_postalcode"
                     value={formData.zip_postalcode}
@@ -192,7 +192,7 @@ const Bookings = (props: Props) => {
                 <div className="flex flex-col ">
                   <select
                     required
-                    className="p-4 py-3 rounded-md border outline-none focus-within:border-[#0175b2] transition-all border-gray-400 text-sm"
+                    className="p-4 py-3 rounded-md border outline-none focus-within:border-red-400 transition-all border-gray-400 text-sm"
                   >
                     <option value="" className="text-gray-700">
                       Select Country
@@ -214,7 +214,7 @@ const Bookings = (props: Props) => {
                   </p>
                   <input
                     required
-                    className="p-4 py-3 rounded-md marker:rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                    className="p-4 py-3 rounded-md marker:rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                     type="tel"
                     name="phone"
                     value={formData.phone}
@@ -228,7 +228,7 @@ const Bookings = (props: Props) => {
                   </p>
                   <input
                     required
-                    className="p-4 py-3 rounded-md border outline-none focus-within:border-[#0175b2] transition-all border-gray-400 text-sm"
+                    className="p-4 py-3 rounded-md border outline-none focus-within:border-red-400 transition-all border-gray-400 text-sm"
                     type="email"
                     name="email"
                     value={formData.email}
@@ -243,7 +243,7 @@ const Bookings = (props: Props) => {
                   </p>
                   <input
                     required
-                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                     type="date"
                   />
                 </div>
@@ -254,7 +254,7 @@ const Bookings = (props: Props) => {
                   </p>
                   <select
                     required
-                    className="p-4 py-3 rounded-md border outline-none focus-within:border-[#0175b2] transition-all border-gray-400 text-sm"
+                    className="p-4 py-3 rounded-md border outline-none focus-within:border-red-400 transition-all border-gray-400 text-sm"
                   >
                     <option value="" className="text-gray-700">
                       select check-in time
@@ -271,7 +271,7 @@ const Bookings = (props: Props) => {
                   </p>
                   <input
                     required
-                    className="p-4 py-3 rounded-md border outline-none focus-within:border-[#0175b2] transition-all border-gray-400 text-sm"
+                    className="p-4 py-3 rounded-md border outline-none focus-within:border-red-400 transition-all border-gray-400 text-sm"
                     type="text"
                     name="check_in_hour"
                     value={formData.check_in_hour}
@@ -288,7 +288,7 @@ const Bookings = (props: Props) => {
                     <div className="flex justify-start items-center gap-2">
                       <input
                         required
-                        className="p-2 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                        className="p-2 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                         type="radio"
                         name="rad1"
                       />
@@ -297,7 +297,7 @@ const Bookings = (props: Props) => {
                     <div className="flex justify-start items-center gap-2">
                       <input
                         required
-                        className="p-2 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                        className="p-2 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                         type="radio"
                         name="rad1"
                       />
@@ -306,7 +306,7 @@ const Bookings = (props: Props) => {
                     <div className="flex justify-start items-center gap-2">
                       <input
                         required
-                        className="p-2 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                        className="p-2 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                         type="radio"
                         name="rad1"
                       />
@@ -324,7 +324,7 @@ const Bookings = (props: Props) => {
                     <div className="flex justify-start items-center gap-2">
                       <input
                         required
-                        className="p-2 border  border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                        className="p-2 border  border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                         type="radio"
                         name="rad2"
                       />
@@ -333,7 +333,7 @@ const Bookings = (props: Props) => {
                     <div className="flex justify-start items-center gap-2">
                       <input
                         required
-                        className="p-4 py-3 border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                        className="p-4 py-3 border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                         type="radio"
                         name="rad2"
                       />
@@ -342,7 +342,7 @@ const Bookings = (props: Props) => {
                     <div className="flex justify-start items-center gap-2">
                       <input
                         required
-                        className="p-4 py-3 border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                        className="p-4 py-3 border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                         type="radio"
                         name="rad2"
                       />
@@ -351,7 +351,7 @@ const Bookings = (props: Props) => {
                     <div className="flex justify-start items-center gap-2">
                       <input
                         required
-                        className="p-4 py-3 border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                        className="p-4 py-3 border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                         type="radio"
                         name="rad2"
                       />
@@ -367,7 +367,7 @@ const Bookings = (props: Props) => {
                   </p>
                   <input
                     required
-                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                     type="text"
                     name="no_of_guests"
                     value={formData.no_of_guests}
@@ -385,12 +385,12 @@ const Bookings = (props: Props) => {
                     name="special_instructions"
                     value={formData.special_instructions}
                     onChange={handleInputChange}
-                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-[#0175b2] transition-all text-sm"
+                    className="p-4 py-3 rounded-md border border-gray-400 outline-none focus-within:border-red-400 transition-all text-sm"
                   />
                 </div>
               </div>
               <div className="flex w-full">
-                <button className="text-white rounded-md font-montserrat text-[18px] bg-[#105d86] p-3 px-4 w-full  transition-all hover:bg-[#0175b2]">
+                <button className="text-white rounded-md font-montserrat text-[18px] bg-red-700 p-3 px-4 w-full  transition-all hover:bg-red-500">
                   Book Now
                 </button>
               </div>

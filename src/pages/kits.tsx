@@ -84,7 +84,7 @@ const kits = (props: Props) => {
           </div>
           <div className="font-poppins p-4 text-black bg-white flex flex-col gap-4 pt-12 justify-center items-center">
             <h3 className="font-montserrat">STARTER KITS</h3>
-            <div className="p-4 max-w-[60rem] justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-[#b3e4ff]">
+            <div className="p-4 max-w-[60rem] justify-center rounded-md items-start flex text-[16px] w-full flex-col gap-4 bg-red-200">
               <h4>DESCRIPTION</h4>
               <ol className="flex flex-col gap-2 text-[15px]">
                 <li>1. Silicone Slave Collar-$200</li>

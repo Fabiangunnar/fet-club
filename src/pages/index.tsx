@@ -23,61 +23,13 @@ export default function Home() {
         <main className="text-3xl">
           <div ref={targetRef} className="h-screen borderborder-black relative">
             <div className="absolute  top-0 left-0 h-full w-full -z-10 pointer-events-none">
-              <Swiper
-                modules={[Autoplay, EffectFade, EffectCoverflow]}
-                autoplay={{delay: 10000}} // Add this to enable autoplay and set the delay between slides
-                effect="fade" // Add this to enable the fade effect
-                spaceBetween={0}
-                slidesPerView={1}
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
-              >
-                {/* <SwiperSlide>
-                <motion.div
-                  variants={zoomIn(0, 5)}
-                  whileInView="show"
-                  initial="hidden"
-                  viewport={{once: false, amount: 0}}
-                  className="h-screen"
-                >
-                  <img
-                    className="h-full w-full object-cover"
-                    src="/slide1.jpg"
-                    alt=""
-                  />
-                </motion.div>
-              </SwiperSlide> */}
-                <SwiperSlide>
-                  <motion.div
-                    variants={zoomIn(0, 5)}
-                    whileInView="show"
-                    initial="hidden"
-                    viewport={{once: false, amount: 0}}
-                    className="h-screen"
-                  >
-                    <img
-                      className="h-full w-full object-cover"
-                      src="/slide2.jpg"
-                      alt=""
-                    />
-                  </motion.div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <motion.div
-                    variants={zoomIn(0, 5)}
-                    whileInView="show"
-                    initial="hidden"
-                    viewport={{once: false, amount: 0}}
-                    className="h-screen"
-                  >
-                    <img
-                      className="h-full w-full object-cover"
-                      src="/slide10.png"
-                      alt=""
-                    />{" "}
-                  </motion.div>
-                </SwiperSlide>
-              </Swiper>
+              <div className="h-screen">
+                <img
+                  className="h-full w-full object-cover"
+                  src="/slide10.png"
+                  alt=""
+                />{" "}
+              </div>
             </div>
             <div className="absolute  top-0 left-0 w-full h-full p-4 bg-transparent flex flex-col gap-8 justify-center items-center">
               <div className="text-[2.6rem] text-white text-center">
